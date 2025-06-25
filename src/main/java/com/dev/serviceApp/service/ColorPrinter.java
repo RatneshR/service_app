@@ -1,4 +1,4 @@
-package com.dev.serviceApp.service.translateImplementation;
+package com.dev.serviceApp.service;
 
 public interface ColorPrinter {
     String print();

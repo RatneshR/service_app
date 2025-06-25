@@ -3,8 +3,10 @@ package com.dev.serviceApp.service.translateImplementation;
 import com.dev.serviceApp.service.GreenPrinter;
 import org.springframework.stereotype.Component;
 
-//@Component
-public class EngGreenPrinter implements GreenPrinter {
+@Component
+public class SpanishGreenPrinnter implements GreenPrinter {
     @Override
-    public String print() { return "green"; }
+    public String print() {
+        return "verde";
+    }
 }
