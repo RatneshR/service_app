@@ -1,0 +1,41 @@
+package com.dev.serviceApp.dao;
+
+import com.dev.serviceApp.dao.impl.AuthorDaoImpl;
+import com.dev.serviceApp.domain.Authors;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.verify;
+
+@ExtendWith(MockitoExtension.class)
+public class AuthorDaoImplTests {
+    @Mock
+    private JdbcTemplate jdbcTemplate;
+
+    @InjectMocks
+    private AuthorDaoImpl underTest;
+
+    @Test
+    public void testAuthorDaoImpl() {
+        // This is a placeholder for actual test logic.
+        // You can add assertions or mock behaviors as needed.
+        Authors author = Authors.builder()
+                .id(1L)
+                .name("John Dao")
+                .age(30)
+                .build();
+
+        underTest.create(author);
+
+        verify(jdbcTemplate).update(
+                eq("INSERT INTO authors (id, name, age) VALUES (?, ?, ?)"),
+                eq(1L), eq("John Dao"), eq(30)
+        );
+
+    }
+}

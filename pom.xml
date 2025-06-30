@@ -46,11 +46,12 @@
 			<scope>provided</scope>
 		</dependency>
 <!--	To use the H2 in-memory database with Spring Boot.
-This enables H2 for development and testing purposes.	-->
+This enables H2 for development and testing purposes.
+	Right now We are only using for testing purpose -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+			<scope>test</scope>
 		</dependency>
 <!--	To use Spring JDBC.
 This provides the necessary libraries for JDBC support in Spring Boot.	-->
