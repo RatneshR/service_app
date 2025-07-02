@@ -4,13 +4,13 @@ import com.dev.serviceApp.dao.impl.BookDaoImpl;
 import com.dev.serviceApp.domain.Books;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.ArgumentMatchers.refEq;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.verify;
 
 
@@ -46,6 +46,23 @@ public class BookDaoImplTests {
                 eq("973-1000-1001-1"),
                 eq("Effective Java"),
                 eq(1L)
+        );
+    }
+
+    @Test
+    public void testThatFindOneGeneratesTheCorrectSQL() {
+        // This is a placeholder for actual test logic.
+        // You can add assertions or mock behaviors as needed.
+        // For example, you can call the findOne method on underTest with a specific ISBN
+        // and verify that the jdbcTemplate.query method is called with the correct SQL and parameters.
+
+        String isbn = "973-1000-1001-1";
+        underTest.findOne(isbn);
+
+        verify(jdbcTemplate).query(
+                eq("SELECT isbn, name, author_id FROM books WHERE isbn = ? LIMIT 1"),
+                ArgumentMatchers.<BookDaoImpl.BooksRowMapper>any(),
+                eq(isbn)
         );
     }
 }
