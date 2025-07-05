@@ -1,5 +1,6 @@
 package com.dev.serviceApp.dao;
 
+import com.dev.serviceApp.TestDataUtil;
 import com.dev.serviceApp.dao.impl.AuthorDaoImpl;
 import com.dev.serviceApp.domain.Authors;
 import org.junit.jupiter.api.Test;
@@ -27,11 +28,7 @@ public class AuthorDaoImplTests {
     public void testAuthorDaoImpl() {
         // This is a placeholder for actual test logic.
         // You can add assertions or mock behaviors as needed.
-        Authors author = Authors.builder()
-                .id(1L)
-                .name("John Dao")
-                .age(30)
-                .build();
+        Authors author = TestDataUtil.getAuthors();
 
         underTest.create(author);
 
@@ -40,6 +37,7 @@ public class AuthorDaoImplTests {
                 eq(1L), eq("John Dao"), eq(30)
         );
     }
+
 
     @Test
     public void testThatFindOneGeneratesTheCorrectSQL() {
