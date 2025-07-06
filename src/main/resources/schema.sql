@@ -12,6 +12,7 @@
 
 DROP TABLE IF EXISTS "books";
 DROP TABLE IF EXISTS "authors";
+CREATE SEQUENCE authors_id_seq START WITH 1 INCREMENT BY 1;
 
 CREATE TABLE "authors" (
     "id" bigint DEFAULT nextval('authors_id_seq') NOT NULL,
