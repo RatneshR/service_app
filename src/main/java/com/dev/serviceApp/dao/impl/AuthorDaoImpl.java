@@ -2,15 +2,15 @@ package com.dev.serviceApp.dao.impl;
 
 import com.dev.serviceApp.dao.AuthorDao;
 import com.dev.serviceApp.domain.Authors;
-import com.sun.source.tree.OpensTree;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Repository
 public class AuthorDaoImpl implements AuthorDao {
     private final JdbcTemplate jdbcTemplate;
 
@@ -33,7 +33,7 @@ public class AuthorDaoImpl implements AuthorDao {
     public Optional<Authors> findOne(Long id) {
 //        return Optional.empty();
         List<Authors> authorsList = jdbcTemplate.query(
-                "SELECT id, name, age FROM authors WHERE id = ? LIMIT 1",
+                "SELECT id, name, age FROM authors WHERE id = ?",
                 new AuthorsRowMapper(),
                 id
         );
