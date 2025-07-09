@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.dev</groupId>
 	<artifactId>serviceApp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>serviceApp</name>
 	<description>Services project for Spring Boot</description>
 	<url/>
@@ -55,10 +55,35 @@ This enables H2 for development and testing purposes.
 		</dependency>
 <!--	To use Spring JDBC.
 This provides the necessary libraries for JDBC support in Spring Boot.	-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-jdbc</artifactId>-->
+<!--		</dependency>-->
+
+<!--		To set up Spring Data JPA in your Spring Boot projec -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.hibernate.orm</groupId>-->
+<!--			<artifactId>hibernate-core</artifactId>-->
+<!--			<version>5.6.15.Final</version>-->
+<!--		</dependency>-->
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<!--		<dependency>-->
+<!--			<groupId>org.hibernate</groupId>-->
+<!--			<artifactId>hibernate-core</artifactId>-->
+<!--			<version>6.2.29.Final</version>-->
+<!--			<type>pom</type>-->
+<!--		</dependency>-->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.aspectj/aspectjweaver &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.aspectj</groupId>-->
+<!--			<artifactId>aspectjweaver</artifactId>-->
+<!--			<version>1.9.22.1</version>-->
+<!--			<scope>runtime</scope>-->
+<!--		</dependency>-->
 <!--		Add the following dependency to your pom.xml to include the PostgreSQL JDBC driver.
  This allows your Spring Boot application to connect to a PostgreSQL database.-->
 		<dependency>
@@ -77,4 +102,14 @@ This provides the necessary libraries for JDBC support in Spring Boot.	-->
 		</plugins>
 	</build>
 
+<!--	<repositories>-->
+<!--		<repository>-->
+<!--			<id>org.hibernate</id>-->
+<!--			<url>https://mvnrepository.com/artifact/org.hibernate/hibernate-core/</url>-->
+<!--		</repository>-->
+<!--		<repository>-->
+<!--			<id>org.aspectj</id>-->
+<!--			<url>https://mvnrepository.com/artifact/org.aspectj/aspectjweaver</url>-->
+<!--		</repository>-->
+<!--	</repositories>-->
 </project>
