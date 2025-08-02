@@ -1,6 +1,7 @@
 package com.dev.serviceApp;
 
 import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,7 +17,7 @@ public class ServiceAppApplication implements CommandLineRunner {
 
     public ServiceAppApplication(final DataSource dataSource) {
         this.dataSource = dataSource;
-        log.info("DataSource: " + dataSource);
+        // log.info("DataSource: " + dataSource);
     }
 
     public static void main(String[] args) {
@@ -26,7 +27,7 @@ public class ServiceAppApplication implements CommandLineRunner {
     @Override
     public void run(final String... args) {
         System.out.println("Application Started!!");
-        log.info("DataSource: " + dataSource.toString());
+        // log.info("DataSource: " + dataSource.toString());
 
         final JdbcTemplate restTemplate = new JdbcTemplate(dataSource);
         restTemplate.execute("SELECT 1");

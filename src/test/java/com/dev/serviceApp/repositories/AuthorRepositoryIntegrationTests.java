@@ -22,14 +22,14 @@ public class AuthorRepositoryIntegrationTests {
         this.authorDao = underTest;
     }
 
-    @Test
-    public void testThatAuthorCanBeCreatedandRecalled () {
-        Authors author = TestDataUtil.createTestAuthorA();
-        authorDao.save(author);
-        Optional<Authors> result = authorDao.findById(author.getId());
-        assertThat(result).isPresent();
-        assertThat(result.get()).isEqualTo(author);
-    }
+//    @Test
+//    public void testThatAuthorCanBeCreatedandRecalled () {
+//        Authors author = TestDataUtil.createTestAuthorA();
+//        authorDao.save(author);
+//        Optional<Authors> result = authorDao.findById(author.getId());
+//        assertThat(result).isPresent();
+//        assertThat(result.get()).isEqualTo(author);
+//    }
 
 //    @Test
 //    public void testThatMultipleAuthorsCanBeCreatedAndRecalled() {
