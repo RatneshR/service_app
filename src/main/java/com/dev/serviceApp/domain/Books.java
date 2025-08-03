@@ -17,10 +17,13 @@ public class Books {
     private String isbn;
     private String name;
 
+    private String author;
+    private String yearPublished;
+
 
 //    private Long author_id;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "'author_id'") //, referencedColumnName = "id"
-    private Authors author; // Assuming you want to use the Authors entity as a reference
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "'author_id'") //, referencedColumnName = "id"
+//    private Authors author; // Assuming you want to use the Authors entity as a reference
 }
 

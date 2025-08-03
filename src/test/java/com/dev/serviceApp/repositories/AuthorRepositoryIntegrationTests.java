@@ -1,7 +1,7 @@
 package com.dev.serviceApp.repositories;
 
 import com.dev.serviceApp.TestDataUtil;
-import com.dev.serviceApp.domain.Authors;
+//import com.dev.serviceApp.domain.Authors;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +15,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 @ExtendWith(SpringExtension.class)
 public class AuthorRepositoryIntegrationTests {
-    private AuthorRepository authorDao;
-
-    @Autowired
-    public AuthorRepositoryIntegrationTests(AuthorRepository underTest) {
-        this.authorDao = underTest;
-    }
+//    private AuthorRepository authorDao;
+//
+//    @Autowired
+//    public AuthorRepositoryIntegrationTests(AuthorRepository underTest) {
+//        this.authorDao = underTest;
+//    }
 
 //    @Test
 //    public void testThatAuthorCanBeCreatedandRecalled () {
